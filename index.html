@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your knowledge with fun and interactive quizzes across various subjects.">
+    <meta name="keywords" content="quiz, learning, knowledge, interactive, subjects">
+    <meta name="author" content="Quiz App Team">
+    <title>Home - Quiz App</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Home Icon - Top Left */
+        .home-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+        }
+        .home-icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .home-icon img:hover {
+            transform: scale(1.1);
+        }
+        /* Navigation - Top Right */
+        .nav-links {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        /* Hero Section */
+        .hero {
+            background: #0056b3;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .start-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ffcc00;
+            color: #333;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+        /* Trial Game Button */
+        .trial-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        .trial-btn:hover {
+            background-color: #218838;
+        }
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 20px;
+        }
+        .feature-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .feature-box h3 {
+            color: #007BFF;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+        .feature-box p {
+            font-size: 1.1em;
+            color: #555;
+        }
+        /* Footer */
+        footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            font-size: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Home Icon (Top Left) -->
+        <a href="index.html" class="home-icon" title="Go to Home">
+            <img src="https://t3.ftcdn.net/jpg/05/34/01/08/360_F_534010883_FyQP2MPvhKkk9o86HeH6XPsBof2EbcHE.jpg" alt="Home">
+        </a>
+        
+        <!-- Centered Title -->
+        <h1 style="margin: 0; font-size: 2.5em;">Brain Bloom Quiz</h1>
+        
+        <!-- Navigation (Top Right) -->
+        <nav class="nav-links">
+            <a href="login.html">Log In</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <h2>Test Your Knowledge with Fun Quizzes!</h2>
+            <p>Join now and challenge yourself with exciting questions in various subjects.</p>
+            <a href="signup.html" class="start-btn">Get Started</a>
+            
+            <!-- Trial Game Button -->
+            <a href="trial_game.html" class="trial-btn">Try the Game</a>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="feature-box">
+                <h3>Interactive Quizzes</h3>
+                <p>Engaging questions to help you learn and grow.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Multiple Subjects</h3>
+                <p>Choose from Science, Math, History, and more.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Track Your Progress</h3>
+                <p>Analyze your scores and improve over time.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <br>
+        <p>&copy; 2025 Quiz App. All Rights Reserved.</p>
+    </br>
+    </footer>
+
+</body>
+</html>

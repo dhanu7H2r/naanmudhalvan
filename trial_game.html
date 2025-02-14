@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try the Game - Quiz App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .home-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .home-icon img {
+            width: 40px;
+            height: 40px;
+        }
+        .nav-links {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+        .hero {
+            background: #0056b3;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .subject-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ffcc00;
+            color: #333;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        .subject-btn:hover {
+            background-color: #ff9900;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 20px;
+        }
+        footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            font-size: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Home Icon -->
+        <a href="index.html" class="home-icon">
+            <img src=https://t3.ftcdn.net/jpg/05/34/01/08/360_F_534010883_FyQP2MPvhKkk9o86HeH6XPsBof2EbcHE.jpg alt="Home">
+        </a>
+        
+        <!-- Title -->
+        <h1 style="margin: 0; font-size: 2.5em;">Brain Bloom Quiz</h1>
+        
+        <!-- Navigation -->
+        <nav class="nav-links">
+            <a href="login.html">Log In</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero">
+            <h2>Try the Game</h2>
+            <p>Select a subject to begin your trial quiz experience.</p>
+
+            <!-- Subject Buttons -->
+            <a href="science.html" class="subject-btn">Science Quiz</a>
+            <a href="maths.html" class="subject-btn">Math Quiz</a>
+            <a href="general.html" class="subject-btn">General Knowledge Quiz</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Quiz App. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Global Style */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Home Icon */
+        .home-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .home-icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Navigation */
+        .nav-links {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-form button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #218838;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            font-size: 1em;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #0056b3;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .start-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #ffcc00;
+            color: #333;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .trial-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .trial-btn:hover {
+            background-color: #218838;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Home Icon -->
+        <a href="index.html" class="home-icon">
+            <img src="https://t3.ftcdn.net/jpg/05/34/01/08/360_F_534010883_FyQP2MPvhKkk9o86HeH6XPsBof2EbcHE.jpg" alt="Home">
+        </a>
+
+        <!-- Title -->
+        <h1 style="margin: 0; font-size: 2.5em;">Brain Bloom Quiz</h1>
+
+        <!-- Navigation -->
+        <nav class="nav-links">
+            <a href="login.html">Log In</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Test Your Knowledge with Fun Quizzes!</h2>
+        <p>Join now and challenge yourself with exciting questions in various subjects.</p>
+        <a href="signup.html" class="start-btn">Get Started</a>
+        
+        <!-- Trial Game Button -->
+        <a href="trial_game.html" class="trial-btn">Try the Game</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us!</p>
+
+        <!-- Contact Form -->
+        <form class="contact-form" action="submit_form.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Brain Bloom Quiz. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

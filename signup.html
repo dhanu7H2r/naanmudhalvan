@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Brain Bloom Quiz</title>
+    <style>
+        /* Global Style */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Home Icon */
+        .home-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .home-icon img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Navigation */
+        .nav-links {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        /* Sign-Up Section */
+        .signin-container {
+            padding: 60px 20px;
+            background-color: #ffffff;
+            color: #333;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .signin-container h1 {
+            font-size: 2.5em;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .signin-container p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .signin-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .signin-btn:hover {
+            background-color: #218838;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .signup-link a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            font-size: 1em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Home Icon -->
+        <a href="index.html" class="home-icon">
+            <img src="https://t3.ftcdn.net/jpg/05/34/01/08/360_F_534010883_FyQP2MPvhKkk9o86HeH6XPsBof2EbcHE.jpg"alt="Home">
+        </a>
+
+        <!-- Title -->
+        <h1 style="margin: 0; font-size: 2.5em;">Brain Bloom Quiz</h1>
+
+        <!-- Navigation -->
+        <nav class="nav-links">
+            <a href="login.html">Log In</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Sign-Up Section -->
+    <section class="signin-container">
+        <h1>Sign Up</h1>
+        <form action="home.html" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+            </div>
+            <button type="submit" class="signin-btn">Sign Up</button>
+            <p class="signup-link">Already have an account? <a href="login.html">Log In</a></p>
+        </form>
+        <a href="index.html" class="back-btn">Back to Home</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Brain Bloom Quiz. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

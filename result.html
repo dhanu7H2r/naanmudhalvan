@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #58CC02;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 400px;
+            width: 90%;
+            background: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .result-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            background-color: #A2E639;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .result-button:hover {
+            background-color: #8CC82A;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Quiz Results</h2>
+        <p>You scored: 8/10</p> <!-- You will dynamically show the result -->
+        <button class="result-button" onclick="window.location.href='home.html'">Go Home</button>
+    </div>
+</body>
+</html>
