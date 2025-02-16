@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Brain Bloom Quiz</title>
+    <title>Leaderboard - Brain Bloom Quiz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -16,7 +16,6 @@
             background-color: #f4f4f4;
             color: #333;
             transition: background-color 0.3s, color 0.3s;
-            text-align: center;
         }
 
         body.dark-mode {
@@ -209,65 +208,76 @@
             background-color: #444;
         }
 
-        /* Contact Section */
-        .contact {
-            padding: 60px 20px;
-            background-color: #ffffff;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Leaderboard Content Styles */
+        .leaderboard {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
         }
 
-        .contact h2 {
-            font-size: 2.5em;
+        /* Dark Mode Leaderboard Styles */
+        .dark-mode .leaderboard {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+
+        /* Leaderboard Heading Styles */
+        h2 {
             color: #007BFF;
             margin-bottom: 20px;
+            text-align: center;
         }
 
-        .contact p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        /* Contact Form */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 80%;
-            padding: 12px;
-            margin: 10px 0;
+        li {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f9f9f9;
             border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1em;
+            transition: background 0.3s ease;
         }
 
-        .contact-form textarea {
-            height: 150px;
-            resize: none;
+        li:hover {
+            background-color: #e0e0e0;
         }
 
-        .contact-form button {
-            background-color: #28a745;
+        li.dark-mode {
+            background-color: #444;
+            color: #fff;
+        }
+
+        li.dark-mode:hover {
+            background-color: #555;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+            background-color: #007BFF;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
             border-radius: 5px;
+            font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
-        .contact-form button:hover {
-            background-color: #218838;
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
 
-        /* Footer */
+        /* Footer Styles */
         footer {
             background-color: #007BFF;
             color: white;
@@ -342,23 +352,24 @@
         </nav>
     </header>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach out to us!</p>
+    <!-- Leaderboard Content -->
+    <div class="leaderboard">
+        <h2>Leaderboard</h2>
+        <ul id="leaderboard-list">
+            <li>1. John Doe - 1000 points</li>
+            <li>2. Jane Smith - 950 points</li>
+            <li>3. Alex Johnson - 900 points</li>
+        </ul>
 
-        <!-- Contact Form -->
-        <form class="contact-form" action="submit_form.php" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        <!-- Leaderboard Buttons -->
+        <button onclick="showGlobalLeaderboard()">Global Leaderboard</button>
+        <button onclick="showFriendsLeaderboard()">Friends Leaderboard</button>
+        <button onclick="refreshLeaderboard()">Refresh</button>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Brain Bloom Quiz. All Rights Reserved.</p>
+        <p>&copy; 2025 Quiz App. All Rights Reserved.</p>
     </footer>
 
     <!-- Dark Mode Toggle -->
@@ -394,6 +405,7 @@
             // Refresh leaderboard data
         }
     </script>
+
 </body>
 
 </html>

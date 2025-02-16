@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Brain Bloom Quiz</title>
+    <title>Quiz Results - Brain Bloom Quiz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +15,10 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
-            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
             text-align: center;
         }
 
@@ -34,17 +37,20 @@
             background-color: #007BFF;
             color: white;
             padding: 15px 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: relative;
         }
 
         .home-icon {
-            position: relative;
-            order: 1;
             margin-right: 20px;
-            /* Add some spacing */
+            display: flex;
+            align-items: center;
         }
 
         .home-icon img {
@@ -62,13 +68,11 @@
         .unique-dropdown {
             position: relative;
             cursor: pointer;
-            order: 2;
         }
 
         .center-heading {
             text-align: center;
             flex-grow: 1;
-            order: 3;
         }
 
         .center-heading h1 {
@@ -83,7 +87,6 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            order: 4;
         }
 
         .nav-links a {
@@ -163,10 +166,12 @@
         .more-options {
             position: relative;
             cursor: pointer;
+            margin-left: 20px;
         }
 
         .more-options .icon {
             font-size: 1.5em;
+            cursor: pointer;
         }
 
         .more-options .dropdown {
@@ -179,6 +184,7 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             padding: 10px;
             z-index: 1;
+            min-width: 160px;
         }
 
         .dark-mode .more-options .dropdown {
@@ -209,91 +215,73 @@
             background-color: #444;
         }
 
-        /* Contact Section */
-        .contact {
-            padding: 60px 20px;
-            background-color: #ffffff;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Quiz Results Styles */
+        .quiz-results {
+            max-width: 600px;
+            margin: 100px auto 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+            text-align: center; /* Ensure the main content is centered */
         }
 
-        .contact h2 {
-            font-size: 2.5em;
+        .dark-mode .quiz-results {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+
+        .quiz-results h2 {
             color: #007BFF;
             margin-bottom: 20px;
         }
 
-        .contact p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        /* Contact Form */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 80%;
-            padding: 12px;
+        .quiz-results p {
+            font-size: 1.1em;
             margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1em;
         }
 
-        .contact-form textarea {
-            height: 150px;
-            resize: none;
-        }
-
-        .contact-form button {
-            background-color: #28a745;
+        .quiz-results button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #007BFF;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
             border-radius: 5px;
+            font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
-        .contact-form button:hover {
-            background-color: #218838;
+        .quiz-results button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
 
-        /* Footer */
+        /* Footer Styles */
         footer {
             background-color: #007BFF;
             color: white;
-            padding: 10px;
+            padding: 15px;
             font-size: 1em;
             text-align: center;
+            width: 100%;
+            position: relative;
+            margin-top: auto;
         }
 
-        /* Animations */
         @keyframes fadeIn {
-            from {
-                opacity: 0
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
             }
 
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0
-            }
-
-            to {
-                opacity: 1
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -304,8 +292,8 @@
     <header>
         <!-- Home Icon -->
         <a href="index.html" class="home-icon">
-            <img src="https://t3.ftcdn.net/jpg/05/34/01/08/360_F_534010883_FyQP2MPvhKkk9o86HeH6XPsBof2EbcHE.jpg" alt="Home"
-                style="width:40px;height:auto;">
+            <img src="https://t3.ftcdn.net/jpg/05/34/01/08/360_F_534010883_FyQP2MPvhKkk9o86HeH6XPsBof2EbcHE.jpg"
+                alt="Home">
         </a>
 
         <!-- Unique Dropdown for Leaderboard, Results, Categories -->
@@ -330,7 +318,9 @@
             <a href="profile.html"><i class="fas fa-user"></i>Profile</a>
             <a href="categories.html"><i class="fas fa-list"></i>Categories</a>
             <a href="results.html"><i class="fas fa-trophy"></i>Results</a>
+            <a href="leaderboard.html"><i class="fas fa-chart-line"></i>Leaderboard</a>
             <a href="create_quiz.html"><i class="fas fa-plus"></i>Create Quiz</a>
+            <!-- More Options Dropdown -->
             <div class="more-options">
                 <span class="icon">⋮</span>
                 <div class="dropdown">
@@ -342,27 +332,24 @@
         </nav>
     </header>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach out to us!</p>
-
-        <!-- Contact Form -->
-        <form class="contact-form" action="submit_form.php" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <!-- Quiz Results Content -->
+    <div class="quiz-results">
+        <h2>Quiz Results</h2>
+        <p>Your Score: <strong>8/10</strong></p>
+        <p>Time Taken: <strong>5:30 minutes</strong></p>
+        <button onclick="retryQuiz()">Retry Quiz</button>
+        <button onclick="viewAnswers()">View Answers</button>
+        <button onclick="shareScore()">Share Score</button>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Brain Bloom Quiz. All Rights Reserved.</p>
+        <p>&copy; 2025 Quiz App. All Rights Reserved.</p>
     </footer>
 
     <!-- Dark Mode Toggle -->
-    <button id="dark-mode-toggle" title="Toggle Dark Mode">
+    <button id="dark-mode-toggle" title="Toggle Dark Mode"
+        style="position:fixed;bottom:20px;right:20px;padding:10px;background-color:#007BFF;color:white;border:none;border-radius:50%;cursor:pointer;">
         <i class="fas fa-moon"></i>
     </button>
 
@@ -379,19 +366,19 @@
             }
         });
 
-        function showGlobalLeaderboard() {
-            alert('Showing global leaderboard...');
-            // Fetch and display global leaderboard data
+        function retryQuiz() {
+            alert('Retrying quiz...');
+            // Redirect to the quiz page
         }
 
-        function showFriendsLeaderboard() {
-            alert('Showing friends leaderboard...');
-            // Fetch and display friends leaderboard data
+        function viewAnswers() {
+            alert('Viewing answers...');
+            // Redirect to answers page
         }
 
-        function refreshLeaderboard() {
-            alert('Refreshing leaderboard...');
-            // Refresh leaderboard data
+        function shareScore() {
+            alert('Sharing score...');
+            // Open social media sharing dialog
         }
     </script>
 </body>
