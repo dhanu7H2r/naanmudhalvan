@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Brain Bloom Quiz</title>
+    <title>Quiz Categories - Brain Bloom Quiz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -16,7 +15,6 @@
             background-color: #f4f4f4;
             color: #333;
             transition: background-color 0.3s, color 0.3s;
-            text-align: center;
         }
 
         body.dark-mode {
@@ -29,53 +27,32 @@
             background-color: #1f1f1f;
         }
 
+        .dark-mode .quiz-categories {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+
         /* Header */
         header {
             background-color: #007BFF;
             color: white;
             padding: 15px 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            position: relative;
-        }
-
-        .home-icon {
-            position: relative;
-            order: 1;
-            margin-right: 20px;
-            /* Add some spacing */
-        }
-
-        .home-icon img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .home-icon img:hover {
-            transform: scale(1.1);
-        }
-
-        .unique-dropdown {
-            position: relative;
-            cursor: pointer;
-            order: 2;
+            align-items: center;
         }
 
         .center-heading {
             text-align: center;
             flex-grow: 1;
-            order: 3;
+            margin: 0 20px;
         }
 
         .center-heading h1 {
             font-size: 2.5em;
             font-weight: bold;
             color: #ffcc00;
-            margin: 0;
+            margin: 0; /* Reset default margin */
         }
 
         /* Navigation Links */
@@ -83,7 +60,6 @@
             display: flex;
             align-items: center;
             gap: 20px;
-            order: 4;
         }
 
         .nav-links a {
@@ -102,7 +78,13 @@
             color: #ffcc00;
         }
 
-        /* Dropdown Styles */
+        /* Unique Dropdown for Leaderboard, Results, Categories */
+        .unique-dropdown {
+            position: relative;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
         .unique-dropdown .icon {
             font-size: 1.5em;
             margin-right: 10px;
@@ -209,62 +191,44 @@
             background-color: #444;
         }
 
-        /* Contact Section */
-        .contact {
-            padding: 60px 20px;
-            background-color: #ffffff;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Quiz Categories Content */
+        .quiz-categories {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
         }
 
-        .contact h2 {
-            font-size: 2.5em;
+        .quiz-categories h2 {
             color: #007BFF;
             margin-bottom: 20px;
+            text-align: center; /* Center the heading */
         }
 
-        .contact p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
+        /* Categories */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
         }
 
-        /* Contact Form */
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 80%;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1em;
-        }
-
-        .contact-form textarea {
-            height: 150px;
-            resize: none;
-        }
-
-        .contact-form button {
-            background-color: #28a745;
+        .categories button {
+            padding: 15px;
+            background-color: #007BFF;
             color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 1.2em;
             border-radius: 5px;
+            font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
-        .contact-form button:hover {
-            background-color: #218838;
+        .categories button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
 
         /* Footer */
@@ -278,22 +242,14 @@
 
         /* Animations */
         @keyframes fadeIn {
-            from {
-                opacity: 0
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
             }
 
-            to {
-                opacity: 1
-            }
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0
-            }
-
-            to {
-                opacity: 1
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -302,12 +258,6 @@
 <body>
     <!-- Header -->
     <header>
-        <!-- Home Icon -->
-        <a href="index.html" class="home-icon">
-            <img src="https://t3.ftcdn.net/jpg/05/34/01/08/360_F_534010883_FyQP2MPvhKkk9o86HeH6XPsBof2EbcHE.jpg" alt="Home"
-                style="width:40px;height:auto;">
-        </a>
-
         <!-- Unique Dropdown for Leaderboard, Results, Categories -->
         <div class="unique-dropdown">
             <span class="icon">📊</span>
@@ -330,6 +280,7 @@
             <a href="profile.html"><i class="fas fa-user"></i>Profile</a>
             <a href="categories.html"><i class="fas fa-list"></i>Categories</a>
             <a href="results.html"><i class="fas fa-trophy"></i>Results</a>
+            <a href="leaderboard.html"><i class="fas fa-chart-line"></i>Leaderboard</a>
             <a href="create_quiz.html"><i class="fas fa-plus"></i>Create Quiz</a>
             <div class="more-options">
                 <span class="icon">⋮</span>
@@ -342,23 +293,20 @@
         </nav>
     </header>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions, feel free to reach out to us!</p>
-
-        <!-- Contact Form -->
-        <form class="contact-form" action="submit_form.php" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <!-- Quiz Categories Content -->
+    <div class="quiz-categories">
+        <h2>Quiz Categories</h2>
+        <div class="categories">
+            <button onclick="navigateToCategory('science')">Science</button>
+            <button onclick="navigateToCategory('math')">Math</button>
+            <button onclick="navigateToCategory('history')">History</button>
+            <button onclick="navigateToCategory('general')">General Knowledge</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Brain Bloom Quiz. All Rights Reserved.</p>
+        <p>&copy; 2025 Quiz App. All Rights Reserved.</p>
     </footer>
 
     <!-- Dark Mode Toggle -->
@@ -366,7 +314,6 @@
         <i class="fas fa-moon"></i>
     </button>
 
-    <!-- JavaScript -->
     <script>
         // Dark Mode Toggle
         document.getElementById('dark-mode-toggle').addEventListener('click', function () {
@@ -379,19 +326,9 @@
             }
         });
 
-        function showGlobalLeaderboard() {
-            alert('Showing global leaderboard...');
-            // Fetch and display global leaderboard data
-        }
-
-        function showFriendsLeaderboard() {
-            alert('Showing friends leaderboard...');
-            // Fetch and display friends leaderboard data
-        }
-
-        function refreshLeaderboard() {
-            alert('Refreshing leaderboard...');
-            // Refresh leaderboard data
+        function navigateToCategory(category) {
+            alert(`Navigating to ${category} quizzes!`);
+            // Redirect to the selected category page
         }
     </script>
 </body>

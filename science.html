@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Science Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #e0f7fa;
-            color: #444;
+            color: #333;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
             height: 100%;
         }
 
+        /* Header */
         header {
             background-color: #007BFF;
             color: white;
-            padding: 20px;
+            padding: 15px 20px;
             width: 100%;
             position: fixed;
             top: 0;
             left: 0;
             z-index: 1000;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .home-icon {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
+            margin-right: 20px;
         }
 
         .home-icon img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
 
         .nav-links {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
+            display: flex;
+            gap: 20px;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
             font-weight: bold;
-            margin: 0 15px;
             font-size: 1.1em;
         }
 
+        /* Game Container */
         .game-container {
             background-color: white;
             padding: 40px;
-            margin-top: 100px; /* Adjusted to leave space for header */
+            margin-top: 100px;
+            /* Adjusted to leave space for header */
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
             width: 80%;
             max-width: 600px;
@@ -117,6 +122,7 @@
             background-color: #0056b3;
         }
 
+        /* Footer */
         footer {
             background-color: #007BFF;
             color: white;
@@ -129,12 +135,14 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
     <header>
         <a href="index.html" class="home-icon">
-            <img src=https://t3.ftcdn.net/jpg/05/34/01/08/360_F_534010883_FyQP2MPvhKkk9o86HeH6XPsBof2EbcHE.jpg alt="Home">
+            <img src="https://t3.ftcdn.net/jpg/05/34/01/08/360_F_534010883_FyQP2MPvhKkk9o86HeH6XPsBof2EbcHE.jpg"
+                alt="Home">
         </a>
         <h1>Brain Bloom Quiz</h1>
         <nav class="nav-links">
@@ -155,25 +163,62 @@
     </div>
 
     <!-- Footer -->
-     <br>
     <footer>
         <p>&copy; 2025 Quiz App. All Rights Reserved.</p>
     </footer>
-    </br>
 
     <script>
         // Science Questions
-        const questions = [
-            { question: "What is the chemical symbol for water?", answers: ["H2O", "O2", "CO2", "H2"], correct: "H2O" },
-            { question: "Which planet is known as the Red Planet?", answers: ["Mars", "Earth", "Jupiter", "Venus"], correct: "Mars" },
-            { question: "What is the speed of light?", answers: ["300,000 km/s", "150,000 km/s", "500,000 km/s", "1,000,000 km/s"], correct: "300,000 km/s" },
-            { question: "Who is known as the father of modern physics?", answers: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"], correct: "Albert Einstein" },
-            { question: "What is the most abundant gas in the Earth's atmosphere?", answers: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"], correct: "Nitrogen" },
-            { question: "Which organ in the human body is responsible for pumping blood?", answers: ["Brain", "Lungs", "Heart", "Kidneys"], correct: "Heart" },
-            { question: "What is the primary source of energy for the Earth?", answers: ["The Moon", "The Sun", "Electricity", "Volcanoes"], correct: "The Sun" },
-            { question: "What is the largest organ in the human body?", answers: ["Brain", "Lungs", "Heart", "Skin"], correct: "Skin" },
-            { question: "What is the chemical formula for methane?", answers: ["CH4", "CO2", "H2O", "C2H6"], correct: "CH4" },
-            { question: "What is the process by which plants make their food?", answers: ["Photosynthesis", "Respiration", "Transpiration", "Fertilization"], correct: "Photosynthesis" }
+        const questions = [{
+                question: "What is the chemical symbol for water?",
+                answers: ["H2O", "O2", "CO2", "H2"],
+                correct: "H2O"
+            },
+            {
+                question: "Which planet is known as the Red Planet?",
+                answers: ["Mars", "Earth", "Jupiter", "Venus"],
+                correct: "Mars"
+            },
+            {
+                question: "What is the speed of light?",
+                answers: ["300,000 km/s", "150,000 km/s", "500,000 km/s", "1,000,000 km/s"],
+                correct: "300,000 km/s"
+            },
+            {
+                question: "Who is known as the father of modern physics?",
+                answers: ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Nikola Tesla"],
+                correct: "Albert Einstein"
+            },
+            {
+                question: "What is the most abundant gas in the Earth's atmosphere?",
+                answers: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+                correct: "Nitrogen"
+            },
+            {
+                question: "Which organ in the human body is responsible for pumping blood?",
+                answers: ["Brain", "Lungs", "Heart", "Kidneys"],
+                correct: "Heart"
+            },
+            {
+                question: "What is the primary source of energy for the Earth?",
+                answers: ["The Moon", "The Sun", "Electricity", "Volcanoes"],
+                correct: "The Sun"
+            },
+            {
+                question: "What is the largest organ in the human body?",
+                answers: ["Brain", "Lungs", "Heart", "Skin"],
+                correct: "Skin"
+            },
+            {
+                question: "What is the chemical formula for methane?",
+                answers: ["CH4", "CO2", "H2O", "C2H6"],
+                correct: "CH4"
+            },
+            {
+                question: "What is the process by which plants make their food?",
+                answers: ["Photosynthesis", "Respiration", "Transpiration", "Fertilization"],
+                correct: "Photosynthesis"
+            }
         ];
 
         let currentQuestionIndex = 0;
@@ -211,7 +256,8 @@
 
         function handleTimeout() {
             if (!answered) {
-                document.getElementById('result').innerHTML = `Time's up! The correct answer was "${questions[currentQuestionIndex].correct}".`;
+                document.getElementById('result').innerHTML =
+                    `Time's up! The correct answer was "${questions[currentQuestionIndex].correct}".`;
                 document.querySelectorAll('.answer').forEach(answer => {
                     if (answer.textContent === questions[currentQuestionIndex].correct) {
                         answer.classList.add('correct');
@@ -234,7 +280,8 @@
                     }
                 });
             } else {
-                document.getElementById('result').innerHTML = `Incorrect! The correct answer was "${correctAnswer}".`;
+                document.getElementById('result').innerHTML =
+                    `Incorrect! The correct answer was "${correctAnswer}".`;
                 document.querySelectorAll('.answer').forEach(answer => {
                     if (answer.textContent === correctAnswer) {
                         answer.classList.add('correct');
@@ -262,4 +309,5 @@
     </script>
 
 </body>
+
 </html>
